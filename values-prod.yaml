@@ -1,0 +1,15 @@
+image:
+  repository: docker.io/igalla
+  tag: "prod"
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+
+postgres:
+  host: "postgres-prod"
+  user: "prod_user"
+  password: "prod_password"
+  db: "logs"
+

@@ -1,0 +1,15 @@
+image:
+  repository: docker.io/igalla/log-collector
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+postgres:
+  host: "postgres-service"
+  user: "postgres"
+  password: "postgres"
+  db: "logs"
+

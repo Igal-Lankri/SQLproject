@@ -1,0 +1,15 @@
+image:
+  repository: docker.io/igalla
+  tag: "dev"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+postgres:
+  host: "postgres-dev"
+  user: "postgres"
+  password: "postgres"
+  db: "logs"
+

@@ -1,0 +1,4 @@
+apiVersion: v2
+name: log-collector
+version: 0.1.0
+

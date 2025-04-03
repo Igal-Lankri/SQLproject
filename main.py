@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from app.db import insert_log, get_logs
+from db import insert_log, get_logs
 
 app = FastAPI()
 

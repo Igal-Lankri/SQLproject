@@ -10,7 +10,7 @@ async def create_log(request: Request):
     if not message:
         return {"error": "Message required"}
     insert_log(message)
-    print("inserted")
+    print("insert")
     return {"status": "Log saved"}
 
 @app.get("/logs")

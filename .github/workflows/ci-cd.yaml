@@ -16,6 +16,8 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container:
+      image: google/cloud-sdk:slim
 
     steps:
     - name: Checkout code

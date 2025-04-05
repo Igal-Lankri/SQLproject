@@ -46,6 +46,12 @@ jobs:
         gcloud config set compute/zone $GKE_ZONE
         gcloud container clusters get-credentials $GKE_CLUSTER
 
+    - name: Install gke-gcloud-auth-plugin
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
+
+
     - name: Deploy to GKE via Helm
       run: |
         helm upgrade --install $DEPLOYMENT_NAME . \

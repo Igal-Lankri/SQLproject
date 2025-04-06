@@ -37,6 +37,16 @@ jobs:
         docker build -t docker.io/${{ env.IMAGE_NAME }}:${{ github.sha }} .
         docker push docker.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
+    - name: Update values-dev.yaml with new image tag
+      run: |
+        sed -i "s/^  tag: .*/  tag: ${{ github.sha }}/" values-dev.yaml
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add values-dev.yaml
+        git commit -m "ci: update image tag to ${{ github.sha }}"
+        git push origin main
+
+
     - name: Set up gcloud CLI
       uses: google-github-actions/auth@v2
       with:

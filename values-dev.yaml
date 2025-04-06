@@ -1,6 +1,6 @@
 image:
   repository: docker.io/igalla
-  tag: ed551973d27eff1f4455b0a471833e70d977e8e1
+  tag: 453e66b3a310dd85c2bc0d2d4e13d2324838d44a
   pullPolicy: IfNotPresent
 
 service:
